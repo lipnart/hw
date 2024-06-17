@@ -1,0 +1,9 @@
+if [[ ! -f /etc/passwd ]]; then
+    echo "Файл /etc/passwd не знайдено!"
+    exit 1
+fi
+
+echo "Користувачі в /bin/bash в /etc/passwd:"
+grep '/bin/bash' /etc/passwd | cut -d: -f1
+
+exit 0
